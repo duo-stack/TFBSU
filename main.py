@@ -7,6 +7,7 @@ from BeautifulReport import BeautifulReport
 
 from Common.compress import compress
 from Common.email import Email
+from Common.log import log_init
 
 
 test_case_folder = "Case"
@@ -17,6 +18,8 @@ template = "Static/template/template.html"
 _home = abspath(dirname(__file__))
 test_case_path = join(_home, test_case_folder)
 report_path = join(_home, report_folder)
+
+log_init()
 
 
 def format_email_content(result) -> str:
